@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css学习之浮动</title>
+    <style>
+        .wrapper{
+            width:600px;
+            height: 250px;
+            border:5px solid #000000;
+            overflow: scroll;
+        }
+        .box1,.box2,.box3,.box4{
+            width:200px;
+            height:150px;
+        }
+        .box1{
+            background-color: red;
+            float:left;
+            
+        }
+        .box2{
+            background-color: blue;
+            float:left;
+        }
+        .box3{
+            background-color: blueviolet;
+            float:left;
+            
+        }
+        .box4{
+            background-color: darkgreen;
+            float:right;
+        }
+    </style>
+</head>
+<body>
+<!--
+    float : left左排列 right右排列 none
+    左排列和右排列在同一层
+    标准流中的前面的块级元素也会占用浮动流中的一行
+    标准流中的后面的块级元素会顶上来
+    左右浮动范围由上一级元素的宽度决定
+    浮动就是让块级标签不独占一行
+    使用场景（目的）：让块级标签元素可以排在一行上
+    浮动原理：让元素脱离文档流，脱离标准流，漂浮在标准流之上，和标准流在不同层次
+
+    清除浮动：让后面的元素自动掉到下一行
+    1.clear:left right both none;
+    2.overflow:hidden visible auto scroll
+-->
+<div class="wrapper">
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+    <div class="box4">box4</div>
+</div>
+
+</body>
+</html>

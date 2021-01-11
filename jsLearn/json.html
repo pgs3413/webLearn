@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>json学习</title>
+</head>
+<body>
+<!-- 
+json就是一个特殊格式的字符串，这个字符串可以被任意语言识别
+并且转换为任意语言的对象
+json在开发中主要用于数据的交互
+
+json和js对象的格式一样 json字符串中的属性名必须加双引号
+    
+
+json分类：
+  1.json对象{} '{"name":"孙悟空","age":18,"gender":true }'
+  2.json数组[]  '[1,2,3,"hello",true]'
+
+属性值：字符串，数值，布尔值，空值，json对象，json数组
+ -->
+
+<!-- 
+将json字符串转换为js对象 也可以将js对象转换为json字符串
+
+工具类：JSON
+     jsonStr->json  JSON.parse(jsonStr);
+    
+     json->jsonStr JSON.stringify(json);
+
+-->
+<script>
+    // jsonStr ：json字符串   json：json对象 
+    // var jsonStr='{"name":"孙悟空","age":18,"gender":true }';
+    
+    // jsonStr-->json
+    // var json = JSON.parse(jsonStr);
+    // alert(json.age);
+
+
+//    arr='[1,2,3,"hello",true]';
+//    var json= JSON.parse(arr);
+//    alert(json[4]);
+
+    // json-->jsonStr
+    var json={name:"孙悟空",age:18,gender:true };
+    var jsonStr= JSON.stringify(json);
+    alert(jsonStr);
+</script>
+</body>
+</html>

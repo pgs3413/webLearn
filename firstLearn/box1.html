@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型之padding</title>
+    <style>
+       /* html{
+            height:100%;
+        }
+        body{
+            height:100%;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }*/
+        /*
+        如果没有设置宽高，则内容体变，框不变
+        */
+        /*.box1{*/
+            /* 盒子实际大小=边框+padding+内容框(我们看到的)
+            width=内容框
+            保持一致：width-padding
+            */
+           /* width:410px;
+            height:410px;*/
+            /*隐藏了一个内容框 内容永远在内容框左上角 
+              内容框不会变 外框变 外框的外框不会变
+            */
+
+            /*padding-left:200px;
+            padding-top:200px;       
+            padding-bottom:10px;
+            padding-right:10px;            
+            */           
+            /*padding-left:50%;
+            50%相对于父容器*/
+           /* text-align:center;
+            line-height: 200px;*/
+           /* border:5px solid black;*/
+       /* }*/
+        /*.box2{
+            width:210px;
+            height:210px;
+            border:5px solid red;
+            padding-left: 5000px;
+        }*/
+        div{
+            width:300px;
+            height:100px;
+            background-color: purple;
+        }
+        div p{
+            background-color: skyblue;
+            height:20px;
+            padding:30px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    <div class="box1">
+       <div class="box2">
+        这是一个句子。
+       </div> 
+    </div>
+    -->
+
+<div>
+    <p>好日子</p>
+</div>
+
+</body>
+</html>

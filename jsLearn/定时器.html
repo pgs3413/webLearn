@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定时器</title>
+</head>
+<body>
+<!-- 
+setInterval() 定时调用 开启一个定时器
+可以将一个函数，每隔一段时间被调用一次
+参数：1.回调函数
+     2.时间，毫秒
+
+setInterval()的返回值：返回一个Number类型
+        这个数字是定时器唯一标识
+
+clearInterval();关闭定时器 定时器标识作参数
+
+延时调用: 延时一段时间调用 只调用一次
+setTimeout(function(){},延迟时间)
+
+clearTimeout() 
+ -->
+    <h1 id="count">1</h1>
+</body>
+<script>
+    var count=document.getElementById("count");
+    // var i=0;
+    // var timer= setInterval(function(){
+    //     count.innerHTML=i++;
+    //     if(i==11) clearInterval(timer);
+    // },1000);
+    // var timer=setInterval(function(){},1000);
+    // alert(timer);
+    // clearInterval(timer);
+    // alert(timer);
+    // var timer=setInterval(function(){},1000);
+    // alert(timer);
+    setTimeout(function(){
+        count.innerHTML=2;
+    },5000);
+</script>
+</html>

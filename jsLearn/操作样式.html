@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作css样式</title>
+    <style>
+        #box1{
+            width:200px;
+            height:200px;
+            padding:10px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1"></div><br>
+    <button id="btn01">点我一下</button><br><br>
+    <button id="btn02">再点我一下</button>
+    <script>
+    // 样式相关属性 
+    // 不带px 只读不能改
+    // clientHeight clientWidth 可见高度 可见宽度 包括内容区和内边距
+    //offsetWidth offsetHeight 整个高度 宽度
+    // offsetParent 返回定位父元素
+    // offsetLeft offsetTop 当前元素相对于offsetParent的偏移量
+    // scrollHeight scrollWidth 滚动高度 滚动宽度
+    // scrollLeft scrollTop 滚动条偏移量
+    var box1=document.getElementById("box1");
+    var btn=document.getElementById("btn01");
+    btn.onclick=function(){
+        alert(box1.clientHeight);
+
+    };
+    </script>
+    <script>
+        // var btn=document.getElementById("btn01");
+        // var box1=document.getElementById("box1");
+        // var btn02=document.getElementById("btn02");
+        // btn.onclick=function(){
+        // 通过js修改元素的样式  元素.style.样式名=样式值(字符串)
+        // 改变的是内联样式 优先级高
+        // box1.style.width="300px";
+        // box1.style.height="300px";
+        // box1.style.backgroundColor="blue";//不用减号
+        // };
+        // btn02.onclick=function(){
+        // alert(box1.style.backgroundColor);//读的也是内联样式
+        // 语法：元素.currentStyle.样式名 (读取当前样式)
+        // alert(box1.currentStyle.backgroundColor);//只能用于IE
+        // 在其他浏览器的方法
+        // window.getComputedStyle() 获取其他样式 window可省略
+        // 两个参数：1.获取谁的元素 传相应的对象 2.伪元素 一般为null
+        // 返回一个对象 对象.样式
+        // var obj=window.getComputedStyle(box1,null);//只读不改
+        // alert(obj.width);
+        // alert(obj.backgroundColor);返回一个rgb
+        // }
+    </script>
+</body>
+</html>

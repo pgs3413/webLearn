@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css学习:选择器</title>
+    <style>
+       /* span{
+            font-size:100px;
+            color:red;
+            border:1px solid blue;
+        }
+        <span>今天天气好晴朗</span>
+        */
+      /*.red_font{
+          color:red;
+      } 
+    <span>span1:我是黑色</span>
+<span class="red_font">span2:我是红色</span>
+<div>div1:我是黑色</div>
+<div class="red_font">div2:我是红色</div>
+      */ 
+   /* #d1{
+        color:red;
+    }
+    <span>span1:我是黑色</span>
+<span >span2:我是黑色</span>
+<div>div1:我是黑色</div>
+<div id="d1">div2:我是红色</div>
+    
+    */
+   /* div font{
+        color:red;
+    }
+<div>
+    <font>我想变红</font>
+</div>
+<font>我保持黑色</font>
+    */
+
+/*a:link{
+    color:red;
+}
+a:visited{
+    color:green;
+}
+a:hover{
+    color:yellow;
+}
+a:active{
+    color:blue;
+}
+<a href=#>单击我跳转</a>
+input:focus{
+outline:1px solid red;
+}
+
+<input type=text>
+*/
+
+    </style>
+</head>
+<body>
+  <!--
+在<style>标签内容体书写css代码
+<style>标签放置在<head>标签之中
+格式：
+选择器名称{属性名：属性值；属性名：属性值；....}
+选择器：即指定css样式作用在哪些html标签上
+
+  -->
+    <!--
+每个标签都有个style属性
+<font size=7>今天天气好晴朗</font><br>
+<font style="font-size:120px;">今天天气好晴朗</font>
+
+    -->
+<!--
+每一个标签都有一个class属性，class属性即为类名
+.类名{ css样式代码}
+每一个标签都有一个id属性，id属性值在本页面唯一
+#id值{css样式代码}
+-->
+<!--
+伪类选择器：专门用来表示元素的一种特殊状态
+常用伪类选择器：
+a:visited已被访问状态 link未访问状态 hover鼠标悬停状态 active用户激活
+表单组件：focus 
+first-child last-child nth-child(number)
+
+属性选择器：选择器[属性值]{}
+关系选择器：空格 > +
+伪元素 :before :after :first-letter :first-line
+::selection ::placeholder ::backdrop
+-->
+<!--
+    选择器的组合方式 层级关系
+    选择器1 选择器2..{ css样式代码}
+
+-->
+<!--
+<p>this is a 3.html</p><br>
+<p>this is head</p>
+-->
+
+
+</body>
+</html>
+

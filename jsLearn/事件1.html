@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件学习1</title>
+</head>
+<body>
+<!-- 
+事件，用户和浏览器之间的交互行为
+点击某个元素 移动鼠标 操控键盘。。。
+js ，处理事件
+
+事件绑定对象 系统就会监听对象
+不同事件 监听不同行为
+ -->
+ <!-- 耦合，不建议 -->
+ <!-- <button id="btn" ondblclick="alert('hello')">我是一个按钮</button> -->
+ <button id="btn">我是一个按钮</button>
+ <script>
+    //  为对应事件绑定处理函数的形式来响应事件
+    var btn=document.getElementById("btn");
+    btn.onclick=function(){alert("helloWorld");};
+ </script>
+</body>
+</html>

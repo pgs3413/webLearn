@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件onmousemove</title>
+    <style>
+        /* html{
+            height:100%;
+        }
+        body{
+            height:100%;
+        } */
+        /* #box1{
+            width:400px;
+            height:100px;
+            border:1px solid black;
+        }
+        #box2{
+            width:400px;
+             height:50px; 
+             border:1px solid black; 
+        } */
+        document{
+            border:10px solid black;
+        }
+        #box3{
+            width:100px;
+            height:100px;
+            background-color: red;
+            position:absolute;
+        }
+       
+    </style>
+    <script>
+        window.onload=function(){
+            // var box1=document.getElementById("box1");
+            // var box2=document.getElementById("box2");
+            var box3=document.getElementById("box3");
+            // var body=document.body;
+            // box1.onmousemove=function(e){
+            //     e=e||window.event;
+            //     box2.innerHTML="x="+e.clientX+",y="+e.clientY;
+            // };
+            document.onmousemove=function(e){
+                var x=e.clientX;
+                var y=e.clientY;
+                box3.style.left=""+(x-50)+"px";
+                box3.style.top=""+(y-50)+"px";
+            };
+        };
+    </script>
+</head>
+<body>
+<!--
+!important 选择什么事件 绑定什么对象 用什么事件对象属性
+
+事件：
+onclick onload onscroll
+onmousemove
+
+事件对象：当事件的响应函数被触发时，浏览器会传递一个事件对象作为实参给响应函数
+封装了与事件相关的信息
+不同的事件 不同的事件对象
+event也存在在window对象中
+
+mouseEvent :
+clientX clientY 获取鼠标在当前的可见窗口的坐标不带px
+pageX pageY 相对页面的坐标
+-->
+<!-- <div id="box1"></div><br><br>
+<div id="box2"></div> -->
+<div id="box3"></div>
+</body>
+</html>

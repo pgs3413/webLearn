@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件的拖拽</title>
+    <style>
+        #box1{
+            width:100px;
+            height:100px;
+            background-color: red;
+            position:absolute;
+        }
+    </style>
+</head>
+<body>
+<!-- 
+跟鼠标有关的事件：
+onclick：点一下
+onmousedown：当鼠标被按下
+onmouseup：当鼠标被松开
+onmousemove：当鼠标被移动
+onmouseout：当鼠标被移开
+onmouseover：当鼠标被移到某元素上
+
+取消事件绑定 将事件设为null
+
+滚轮事件：onmousewheel 
+ -->
+    <div id="box1"></div>
+    <script>
+        var box1=document.getElementById("box1");
+        // box1.onmousedown=function(){
+        //     document.onmousemove=function(e){
+        //         var x=e.clientX;
+        //         var y=e.clientY;
+        //         box1.style.left=(x-50)+"px";
+        //         box1.style.top=(y-50)+"px";
+        //         // box1.style.left=(x-(x-box1.offsetLeft))+"px";
+        //         // box1.style.top=(y-(y-box1.offsetTop))+"px";
+        //     };
+        // box1.onmouseup=function(){
+        //     document.onmousemove=null;
+        // };
+        // };
+        box1.onmousewheel=function(){
+            alert("hhhh");
+        }
+    </script>
+</body>
+</html>

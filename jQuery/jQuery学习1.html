@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery学习1</title>
+    <script src="jquery-3.5.1.min.js"></script>
+    <style>
+    .box{
+        width:200px;
+        height:200px;
+        background-color: pink;
+        position:absolute;
+    }
+    </style>
+</head>
+<body>
+<!-- <button class="btn">click</button><br><br> -->
+<!-- <div class="box">
+<div>杨超越</div>
+<div>杨超越</div>
+<div>杨超越</div>
+<div>杨超越</div>
+</div> -->
+<!-- <div class="box"></div> -->
+<ul>
+    <li><a>我们都是好孩子</a></li>
+    <li><a>我们都是好孩子</a></li>
+    <li><a>我们都是好孩子</a></li>
+    <li><a>我们都是好孩子</a></li>
+    <li><a>我们都是好孩子</a></li>
+</ul>
+<a href="#">我们都是好孩子</a>
+<script>
+    // $("div").css("backgroundColor","pink");
+    // $(".btn").click(function(){
+        // $(".box").slideToggle(500);
+        // $(".box").fadeToggle(1000);
+        // $(".box").fadeTo(1000,0.5);
+    //     $(".box").animate({
+    //         left:400,
+    //         top:400,
+    //         opacity:0.4,
+    //         width:300,
+    //         height:300
+    //     },1000);
+    // });
+    $("ul").on("click","a",function(){
+        alert("我们都是好孩子");
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+
+$ 顶级对象 等同于JQuery 
+
+jQuery对象与DOM对象
+DOM对象 原生js获取的对象
+jQuery对象 用jquery方式获取的对象 
+        本质：利用$对DOM对象包装后产生的对象（伪数组形式存储）
+        jQuery对象只能用jquery方法  DOM对象只能用DOM方法
+
+转换：DOM->jquery $(DOM对象) $(字符串) $('div')
+     jquery->DOM $(DOM对象)[0] $(DOM对象).get(0)
+
+基础选择器 $('选择器')
+$('#id') $('*') $('.class') $('div') $('div,p,li') $('li.current')
+$('ul>li') $('ul li')
+
+筛选选择器：$("li:first") $("li:last") $("li:eq(2)") 第三个
+$("li:odd") 奇数行 $("li:even")偶数行
+
+筛选方法：.parent() .children("选择器") .find("选择器") 子孙后代  
+          .parents('选择器')
+
+兄弟筛选  .siblings("选择器") .nextAll("选择器") .prevAll("选择器")
+        .eq(n) hasClass(className) 
+
+        ！important $(this)
+
+(重点）隐式迭代：自动遍历内部DOM元素
+排他思想：当前元素设置样式，其他兄弟元素清除样式
+
+当前元素索引号：$(this).index() 返回该元素在父元素中的索引
+
+设置样式：$('选择器').css("属性"，"属性值")
+属性值为数字，不用加单位，引号
+获得样式属性值：$('选择器').css("属性") 返回属性值
+设置多个样式：
+        $('选择器').css({属性:"属性值",属性:"属性值",属性:"属性值"})
+
+设置类样式
+ $('选择器').addClass("className")
+ $('选择器').removeClass("className")
+ $('选择器').toggleClass("className") 有则添加 无则删除
+
+jquery效果
+
+显示隐藏：
+show([speed,[easing],[fn]]) hide() toggle() 
+speed:slow normal fast 或数值 easing:swing linear fn:回调函数
+
+滑动：slideDown() slideUp() slideToggle() 同上
+
+淡入淡出：fadeIn() fadeOut() fadeToggle() 同上 fadeTo(speed,opacity,[easing],[fn]])
+
+自定义动画：animate(params,[speed],[easing],[fn])
+params:想要修改的样式属性，以对象形式传递，必须写 后来的状态
+{属性:"属性值",属性:"属性值",属性:"属性值"}
+
+动画或效果队列 一旦触发，排队执行
+停止排队 stop（）写在动画前面
+
+
+
+属性操作
+
+设置或获取元素的固有属性值prop（）
+获取  $('选择器').prop("属性名")
+设置  $('选择器').prop("属性名"，"属性值")
+
+获取自定义属性 $('选择器').attr("属性名")
+设置自定义属性  $('选择器').attr("属性名"，"属性值")
+
+数据缓存data() data("属性名"，"属性值") data("属性名") 相当于变量
+data()方法可以在指定元素上存取数据，并不会修改DOM元素结构。
+一旦页面刷新，之前存放的数据都将被移除 放在元素内存里
+
+内容文本值
+
+获取普通元素内容html() 相当于innerHTML
+设置 html("内容")
+获取普通元素文本内容text() 相当于innerText
+设置 text("内容")
+
+获取表单值(input中的value) val() val("内容")
+
+元素操作
+
+遍历元素 
+1.$('选择器').each(function(index,domEle){})
+每次遍历传进一个相应的下标和DOM对象
+2.$.each(object,function(index,ele){}) 遍历对象 数组
+
+创建元素：var li = $("<li>内容</li>")
+添加元素：
+        内部添加：$("ul").append(li) 追加在后面 prepend() 放前面
+        外部添加：$("li").after(li) .before(li) 兄弟关系
+删除元素：$("ul").remove()删除自身 .empty()删除所有子元素 ==.html("")
+
+事件：
+.click(fn) .mouseover(fn) .mouseout(fn) .change()
+blur() focus() keydown() keyup() resize() scroll() 
+.hover(fn,fn) 第一个是鼠标经过 第二个是鼠标移出 
+如果只有一个fn 则经过移出都执行
+
+多个事件注册：$('选择器')on(events,[selector],fn) 
+selector:子元素
+$("div").on("click",fun)
+$("div").on({click:fun,mouseover:fun},....)
+$("div").on("mouseover mouseout",fun)
+
+事件委派：
+$('ul').on("click","li",function(){})
+$("ul").off("click","li")
+
+on可以给动态创建的元素绑定事件
+
+事件解绑：$('选择器').off() 解绑所有事件
+$('选择器').off("click") 解绑点击事件
+
+one()来绑定事件，只会触发一次
+
+自动触发事件：trigger()
+$('选择器').trigger("click") 
+$('选择器').triggerHandler("click") 不会触发元素的默认行为
+
+jquery事件对象 调用事件回调函数会自动传
+$('选择器').on("事件",function(event){})
+
+阻止默认行为：event.preventDefault() 或 return false
+阻止冒泡：event.stopPropagation()
+
+对象拷贝：
+把某个对象拷贝（合并）给另外一个对象使用
+$.extend([deep],target,object1,[objectN])
+deep:true false
+target:要拷贝的目标对象
+object1：待拷贝到第一个对象的对象 object1拷贝给target
+
+多库共存 var xx=$.noConflict()
+
+jQuery 插件 下载代码 使用（复制） 要先引入jQuery文件
+http://www.jq22.com/
+http://www.htmleaf.com/
+
+
+尺寸和位置操作
+
+.width() .height() 内容体
+innerWidth() innerHeight() 包含padding
+outerWidth() outerHeight() 包含padding border
+outerWidth(true) outerHeight(true) 包含padding border margin
+
+offset() 相对文档位置 offset().left offset().top 设置：传一个对象
+position() 相对父元素位置 只能获取不能设置
+scrollTop() scrollLeft()

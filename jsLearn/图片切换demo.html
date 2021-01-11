@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片切换</title>
+    <script>
+        window.onload=function(){
+            var btn = document.getElementById("btn");
+            btn.onclick=function(){
+                var img=document.getElementById("d1");
+                if(img.value==1)
+                {    img.value=2;
+                    img.src="2.jpg";}
+                else {
+                    img.value=1;
+                    img.src="1.jpg";}
+            }
+
+
+        };
+    </script>
+</head>
+<body>
+    <img src="1.jpg" style="width:30%" id="d1" value=1><br>
+    <button id="btn">切换</button>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下拉菜单</title>
+    <style>
+        .nav ul{
+            display:inline-block;   
+        }
+        .nav{
+            
+
+            width:100px;
+
+        }
+        ul{
+            padding:0;
+        }
+        li{
+            list-style-type: none;
+            
+        }
+
+    </style>
+    <script src="jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <div class="nav">
+        <a href="#">微博</a> <br>
+        <ul>
+            <li>私信</li>
+            <li>评论我</li>
+            <li>@我</li>
+        </ul>
+    </div>
+ 
+<script>
+$("ul").hide();
+// $(".nav").mouseover(function(){
+//     $(".nav>ul").show();
+// });
+// $(".nav").mouseout(function(){
+//     $(this).children("ul").hide();
+// });
+$(".nav").hover(function(){
+    $(this).children("ul").stop().slideToggle();
+});
+</script>
+</body>
+</html>

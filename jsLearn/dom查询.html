@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dom查询</title>
+</head>
+<body>
+<!-- 
+获取元素节点： 都是document对象
+getElementById() 返回一个元素
+getElementsByTagName() 通过标签名返回一组元素
+getElementsByName() 通过name属性返回一组 获得表单元素
+getElementsByClassName() 通过class属性返回一组 
+
+innerHTML获取标签之间的html代码 元素.innerHTML
+元素.属性 value name ..(属性) 不能用class 用className
+innerText
+
+获取元素节点的子节点
+方法：getElementByTagName() 元素节点调用
+属性：childNodes 包括元素节点 文本节点 换行等所有子节点
+                空白当成文本节点
+children:只获取子元素（标签）
+ firstChild lastChild
+firstElementChild 
+
+获取父节点和兄弟节点
+属性：parentNode previousSibling nextSibling
+previousElementSibling
+
+文本框value值是框内的内容
+
+文本节点的内容获取 .nodeValue
+
+document属性:
+body documentElement(html标签) all  
+
+!important
+document.querySelector() css选择器字符串作为参数
+只会返回第一个
+
+document.querySelectorAll() 返回全部 返回一个节点数组
+ -->
+
+ <div class="box1"> 
+     <div>我是第一个div</div>
+     <div>我是第二个div</div>
+ </div>
+ <script>
+    // var div=document.querySelector(".box1 div");
+    // alert(div.innerHTML);
+    // var divs=document.querySelectorAll(".box1 div");
+    // for(var i=0;i<divs.length;i++) alert(divs[i].innerHTML);
+ 
+ </script>
+</body>
+</html>

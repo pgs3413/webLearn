@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件5</title>
+    <style>
+        #box1{
+            width:100px;
+            height:100px;
+            background-color: red;
+            position:absolute;
+        }
+    </style>
+</head>
+<body>
+<!-- 
+键盘事件：
+onkeydown:某个按键被按下 一直按着 事件一直触发
+onkeyup：某个按键被松开
+onkeypress：某个按键被按下并松开
+
+键盘事件绑定到可以获取焦点的对象或document
+
+利用事件对象关系到具体的按键
+event.keyCode记录了本次触发的按键的unicode码
+altKey ctrKey shiftKey
+-->
+</body>
+<!-- <input type="text"> -->
+<div id="box1"></div>
+<script>
+    // var input=document.getElementsByTagName("input")[0];
+    // input.onkeydown=function(e){
+    //     if(e.keyCode>=48&&e.keyCode<=57&&!e.shiftKey) return false;
+    // };
+    document.onkeydown=function(e){
+        switch(e.keyCode){
+            case 37:
+            box1.style.left=box1.offsetLeft-10+"px";break;
+            case 39:
+            box1.style.left=box1.offsetLeft+10+"px";break;
+            case 38:
+            box1.style.top=box1.offsetTop-10+"px";break;
+            case 40:
+            box1.style.top=box1.offsetTop+10+"px";break;
+
+        }
+    }
+</script> 
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>切换图片</title>
+    <script src="jquery-3.5.1.min.js"></script>
+    <style>
+        .container{
+            width:600px;
+            height:400px;
+            
+            margin:10px auto;
+        }
+        .left,.right{
+            float:left;
+            height:400px;
+            
+        }
+        .left{
+            width: 100px;
+        } 
+         .right{
+            width: 500px;
+            text-align: center;
+        }
+        .left{
+            display:flex;
+            align-items: center;
+        }
+ 
+        li{
+            margin-top:20px;
+            list-style-type: none;
+        }
+        img{
+            width:300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <ul>
+                <li><button id="d1">杨超越</button id="d1"></li>
+                <li><button id="d2">姜贞羽</button></li>
+            </ul>
+        </div>
+        <div class="right">
+            <img src="1.jpg" id="d3">
+        </div>
+    </div>
+    <script>
+        var img=document.getElementById("d3");
+        $("#d1").mousemove(function(){
+            img.src="1.jpg";
+        });
+        $("#d2").mousemove(function(){
+            img.src="2.jpg";
+        });
+    </script>
+</body>
+</html>

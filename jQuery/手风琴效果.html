@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>手风琴效果</title>
+    <script src="jquery-3.5.1.min.js"></script>
+    <style>
+        .container{
+            width:650px;
+            height:50px;
+            
+        }
+        .container div{
+            float:left;
+            height:50px;
+            width:100px;
+        }
+        .container .box1{
+            width:300px;
+            background-color: red;
+        }
+        .box2{
+            background-color: blue;
+        }
+        .box3{
+            background-color: pink;
+        }
+        .box4{
+            background-color: green;
+        }
+        #d1{
+            width:500px;
+            height:500px;
+            border:1px solid transparent;
+            background-color:rgba(67, 85, 165, 0.411);
+            
+        }
+        p{
+            width:200px;
+            height:50px;
+            position:relative;
+            font-size:20px;
+            font-weight: 500;
+            color:#fff;
+            letter-spacing: 2px;
+            text-align: center;
+            line-height: 50px;
+            margin:120px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+    </div>
+    <div id="d1">
+        <p>用户登录</p>
+        <p>游客登录</p>
+    </div>
+    <script>
+        $(".container div").hover(function(){
+            $(this).stop().animate({width:300});
+            $(this).siblings().stop().animate({width:100});
+        });
+        $("#d1 p").hover(function(){
+            $(this).stop().animate({
+                bottom:20
+            });
+        },function(){
+            $(this).stop().animate({
+                bottom:0
+            });
+        });
+    </script>
+</body>
+</html>

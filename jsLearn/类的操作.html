@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>类的操作</title>
+    <style>
+        .c1{
+            width:100px;
+            height:100px;
+            background-color: red;
+        }
+        .c2{
+            /* width:200px; */
+            /* height:200px; */
+            background-color: yellow; 
+        }
+    </style>
+</head>
+<body>
+<!-- 
+通过修改元素的class属性来间接改变元素样式
+只需要修改一次就可以修改多个样式 只要一次渲染 性能更好
+
+-->
+    <div class="c1" id="box1"></div>
+    <button id="d1">点我</button>
+    <script>
+        var btn=document.getElementById("d1");
+        var box1=document.getElementById("box1");
+        btn.onclick=function(){
+            box1.className+=" c2";
+        };
+    </script>
+</body>
+</html>
